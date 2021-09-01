@@ -1,0 +1,141 @@
+html{
+    scroll-behavior: smooth;
+  }
+body{
+    font-family: 'Merienda', cursive;
+    background-color: #EED1CD;
+}
+header{
+    min-height: 100vh;
+    background-image: linear-gradient(#f1dbd467 , #f1dbd467), url(../images/bg.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.navbar{
+    /* position: fixed; */
+    background-color: #eec0bcaf;
+}
+.left{
+    padding-top: 90px;
+}
+.hero{
+    padding-top: 160px;
+    /* color: #eec0bc; */
+   filter: drop-shadow(.65em .65em 1em);
+}
+.hero-head{
+
+    text-shadow: 10px 10px 10px;
+}
+#about{
+
+    background-image: linear-gradient(#f1dbd467 , #f1dbd467), url(../images/Capture1.png) ;
+    background-position: center;
+    background-size: cover;
+
+}
+.description{
+    text-align: center;
+    padding-top: 80px;
+}
+#categories{
+    background-image: linear-gradient(#f1dbd467 , #f1dbd467), url(../images/CCapture.png) ;
+    background-position: center;
+    background-size: cover;
+}
+input{
+    display: none;
+}
+
+.tag{
+    font-size: 1rem;
+    margin: 1.5rem 0rem;
+    padding: 5px 1.8rem;
+    border-radius: 50px;
+    background-color: #efefef;
+    display: inline-block;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+/* .images img{
+    width: 300px;
+    margin-top: 50px;
+    transition: all .4s ease-in-out;
+} */
+
+.images img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+    /* transition: .5s; */
+  }
+
+  .images img:hover{
+    transition: .5s;
+    transform: scale(1.1);
+    padding: 2px;
+}
+
+  .images{
+    column-count: 5;
+    column-gap: 17px;
+    max-width: 1250px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .25);
+    overflow: hidden;
+  }
+  @media screen and (max-width:1024px) {
+    .images{
+      column-count: 4;
+    }
+    
+  }
+  @media screen and (max-width:640px) {
+    .images{
+      column-count: 3;
+    }
+    
+  }
+  @media screen and (max-width:375px) {
+    .images{
+      column-count: 2;
+    }
+    
+  }
+
+  
+
+
+
+#BirthdayCake:checked ~ .images > img:not([class *="BirthdayCake"]),
+#CupCakes:checked ~ .images > img:not([class *="CupCakes"]),
+#CheeseCake:checked ~ .images > img:not([class *="CheeseCake"]),
+#Donuts:checked ~ .images > img:not([class *="Donuts"]),
+#Drinks:checked ~ .images > img:not([class *="Drinks"]){
+    width: 0px;
+    height: 0px;
+    display: none;
+}
+
+#all:checked ~ .all,
+#BirthdayCake:checked ~ .BirthdayCake,
+#CupCakes:checked ~ .CupCakes,
+#CheeseCake:checked ~ .CheeseCake,
+#Donuts:checked ~ .Donuts,
+#Drinks:checked ~ .Drinks{
+    background-color: rgba(51, 51, 51, 0.356);
+    color: #fff;
+}
+    
